@@ -7,198 +7,333 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
     <style>
-        body { 
-            font-family: 'Roboto', sans-serif; 
-        }
+        body { font-family: 'Roboto', sans-serif; }
         .hero-bg {
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/1920/1080');
             background-size: cover;
             background-position: center;
         }
-        .emep-logo {
-            height: 56px;
-            width: auto;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-        }
-        /* Milletvekili fotoğraf çerçevesi */
-        .mv-photo-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-        .mv-photo-wrapper::before {
-            content: '';
-            position: absolute;
-            inset: -6px;
-            border-radius: 28px;
-            background: linear-gradient(135deg, #c8102e 0%, #ff4d6d 50%, #c8102e 100%);
-            z-index: 0;
-        }
-        .mv-photo-wrapper img {
-            position: relative;
-            z-index: 1;
-            border-radius: 22px;
-        }
-        .mv-photo-wrapper::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 24px;
-            background: rgba(200, 16, 46, 0.25);
-            border-radius: 50%;
-            filter: blur(10px);
-            z-index: 0;
-        }
-    </style>
-</head>
+        .red-bg { background-color: #c8102e; }
+        
+    .emep-logo {
+        height: 56px;
+        width: auto;
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    }
+</style></head>
 <body class="bg-gray-50 text-gray-900">
 
-    <!-- HEADER -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex items-center justify-between px-6 py-4">
-                <div class="flex items-center gap-3">
-                    <!-- EMEP LOGOSU -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EMEP_Logo.svg/512px-EMEP_Logo.svg.png" 
-                         alt="EMEP Logo" 
-                         class="emep-logo">
-                    
+<!-- HEADER -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-3">
+                <!-- EMEP LOGOSU -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EMEP_Logo.svg/512px-EMEP_Logo.svg.png" 
+                     alt="EMEP Logo" 
+                     class="emep-logo">
+                
+                <div>
+                    <h1 class="text-2xl font-bold text-red-700">EMEP</h1>
+                    <p class="text-sm text-gray-600 -mt-1">GAZİANTEP</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-lg">
+                <a href="#hakkimizda" class="hover:text-red-700 transition">Hakkımızda</a>
+                <a href="#faaliyetler" class="hover:text-red-700 transition">Faaliyetler</a>
+                <a href="#milletvekili" class="hover:text-red-700 transition">Milletvekilimiz</a>
+                <a href="#iletisim" class="hover:text-red-700 transition">İletişim</a>
+            </nav>
+            
+            <a href="https://www.emep.org" target="_blank" 
+               class="bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition font-medium">
+                ANA SİTE
+            </a>
+        </div>
+    </div>
+</header>
+
+    /* Milletvekili photo frame */
+    .mv-photo-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .mv-photo-wrapper::before {
+        content: '';
+        position: absolute;
+        inset: -6px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, #c8102e 0%, #ff4d6d 50%, #c8102e 100%);
+        z-index: 0;
+    }
+    .mv-photo-wrapper img {
+        position: relative;
+        z-index: 1;
+        border-radius: 22px;
+    }
+    .mv-photo-wrapper::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 24px;
+        background: rgba(200, 16, 46, 0.25);
+        border-radius: 50%;
+        filter: blur(10px);
+        z-index: 0;
+    }
+</style></head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- HEADER -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-3">
+                <div class="w-14 h-14 bg-red-700 rounded-full flex items-center justify-center text-white text-2xl font-bold border-4 border-white shadow">
+                    E
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-red-700">EMEP</h1>
+                    <p class="text-sm text-gray-600 -mt-1">GAZİANTEP</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-lg">
+                <a href="#hakkimizda" class="hover:text-red-700 transition">Hakkımızda</a>
+                <a href="#faaliyetler" class="hover:text-red-700 transition">Faaliyetler</a>
+                <a href="#milletvekili" class="hover:text-red-700 transition">Milletvekilimiz</a>
+                <a href="#iletisim" class="hover:text-red-700 transition">İletişim</a>
+            </nav>
+            
+            <a href="https://www.emep.org" target="_blank" 
+               class="bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition font-medium">
+                ANA SİTE
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg h-screen flex items-center text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            EMEKTEN YANA
+GAZİANTEP İÇİN MÜCADELE
+        </h2>
+        <p class="text-2xl mb-10 max-w-2xl mx-auto">
+            İşçi sınıfının partisi Gaziantep'te örgütleniyor!
+
+            <span class="text-yellow-400">Bütün ülkelerin işçileri birleşin!</span>
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#iletisim" 
+               class="bg-red-700 hover:bg-red-800 text-white text-xl px-10 py-5 rounded-xl font-bold transition inline-block">
+                BİZE KATIL
+            </a>
+            <a href="https://www.instagram.com/emepantep/" target="_blank" 
+               class="bg-white text-red-700 hover:bg-gray-100 text-xl px-10 py-5 rounded-xl font-bold transition inline-flex items-center justify-center gap-3">
+                <i class="fa-brands fa-instagram"></i>
+                @emepantep
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- HAKKIMIZDA -->
+<section id="hakkimizda" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold text-red-700 mb-8">EMEP Gaziantep</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    Emek Partisi (EMEP) Gaziantep İl Örgütü olarak, işçilerin, emekçilerin, gençlerin ve ezilenlerin hakları için mücadele ediyoruz. 
+                    Kapitalizmin sömürüsüne, emperyalizme ve gericiliğe karşı örgütlü bir mücadele yürütüyoruz.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Gaziantep'in fabrika ve atölyelerinde çalışan emekçilerle omuz omuza, insanca bir yaşam için direniyoruz.
+                </p>
+                <div class="mt-10 flex items-center gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-red-700">1996</div>
+                        <div class="text-sm">Kuruluş</div>
+                    </div>
+                    <div class="h-12 w-px bg-gray-300"></div>
                     <div>
-                        <h1 class="text-2xl font-bold text-red-700">EMEP</h1>
-                        <p class="text-sm text-gray-600 -mt-1">GAZİANTEP</p>
+                        <div class="text-xl font-medium">Sevda Karaca Demir</div>
+                        <div class="text-red-600">Gaziantep Milletvekili</div>
                     </div>
                 </div>
-                
-                <nav class="hidden md:flex items-center gap-8 text-lg">
-                    <a href="#hakkimizda" class="hover:text-red-700 transition">Hakkımızda</a>
-                    <a href="#faaliyetler" class="hover:text-red-700 transition">Faaliyetler</a>
-                    <a href="#milletvekili" class="hover:text-red-700 transition">Milletvekilimiz</a>
-                    <a href="#iletisim" class="hover:text-red-700 transition">İletişim</a>
-                </nav>
-                
-                <a href="https://www.emep.org" target="_blank" 
-                   class="bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition font-medium">
-                    ANA SİTE
-                </a>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-6">İlkelerimiz</h3>
+                <ul class="space-y-4 text-lg">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> İşçi sınıfı iktidarı</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Emperyalizme karşı bağımsızlık</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Eşitlik ve özgürlük</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Halkların kardeşliği</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Çevre ve emek mücadelesi</li>
+                </ul>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- HERO -->
-    <section class="hero-bg h-screen flex items-center text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                EMEKTEN YANA<br>GAZİANTEP İÇİN MÜCADELE
-            </h2>
-            <p class="text-2xl mb-10 max-w-2xl mx-auto">
-                İşçi sınıfının partisi Gaziantep'te örgütleniyor!<br>
-                <span class="text-yellow-400">Bütün ülkelerin işçileri birleşin!</span>
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#iletisim" 
-                   class="bg-red-700 hover:bg-red-800 text-white text-xl px-10 py-5 rounded-xl font-bold transition inline-block">
-                    BİZE KATIL
-                </a>
-                <a href="https://www.instagram.com/emepantep/" target="_blank" 
-                   class="bg-white text-red-700 hover:bg-gray-100 text-xl px-10 py-5 rounded-xl font-bold transition inline-flex items-center justify-center gap-3">
-                    <i class="fa-brands fa-instagram"></i>
-                    @emepantep
-                </a>
+<!-- FAALİYETLER -->
+<section id="faaliyetler" class="py-20 bg-red-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Son Faaliyetlerimiz</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+                <img src="https://picsum.photos/id/1015/600/400" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">İşçi Direnişlerine Destek</h3>
+                    <p class="text-gray-600">Gaziantep'teki fabrikalarda süren direnişlere dayanışma ziyaretleri düzenliyoruz.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+                <img src="https://picsum.photos/id/201/600/400" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">MESEM ve Çocuk İşçiliğine Hayır</h3>
+                    <p class="text-gray-600">Milletvekilimiz Sevda Karaca öncülüğünde çocuk emeği sömürüsüne karşı mücadele.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+                <img src="https://picsum.photos/id/870/600/400" class="w-full h-52 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">Halk Buluşmaları</h3>
+                    <p class="text-gray-600">Mahallelerde, fabrikalarda ve üniversitelerde düzenli halk toplantıları yapıyoruz.</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- HAKKIMIZDA -->
-    <section id="hakkimizda" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-red-700 mb-8">EMEP Gaziantep</h2>
-                    <p class="text-lg leading-relaxed mb-6">
-                        Emek Partisi (EMEP) Gaziantep İl Örgütü olarak, işçilerin, emekçilerin, gençlerin ve ezilenlerin hakları için mücadele ediyoruz. 
-                        Kapitalizmin sömürüsüne, emperyalizme ve gericiliğe karşı örgütlü bir mücadele yürütüyoruz.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        Gaziantep'in fabrika ve atölyelerinde çalışan emekçilerle omuz omuza, insanca bir yaşam için direniyoruz.
-                    </p>
-                    <div class="mt-10 flex items-center gap-6">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-red-700">1996</div>
-                            <div class="text-sm">Kuruluş</div>
-                        </div>
-                        <div class="h-12 w-px bg-gray-300"></div>
+<!-- MİLLETVEKİLİ -->
+<section id="milletvekili" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">Gaziantep Milletvekilimiz</h2>
+        <div class="text-3xl text-red-700 mb-10">Sevda Karaca Demir</div>
+        
+        <div class="flex flex-col md:flex-row gap-12 items-center justify-center">
+            <div class="mv-photo-wrapper flex-shrink-0">
+                <img src="data:image/jpeg;base64,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"
+                     alt="Sevda Karaca Demir - EMEP Gaziantep Milletvekili"
+                     class="w-72 h-80 object-cover object-top shadow-2xl">
+            </div>
+            <div class="text-left max-w-xl">
+                <p class="text-lg leading-relaxed mb-4">
+                    Sevda Karaca Demir, EMEP Gaziantep Milletvekilidir. Emekçilerin, kadınların ve gençlerin hakları için TBMM'de ve sahada mücadele etmektedir.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed">
+                    Çocuk emeği sömürüsü, MESEM uygulamaları ve işçi hakları başta olmak üzere, sosyal adaletsizliklere karşı meclis kürsüsünden sesini yükseltmektedir.
+                </p>
+                <div class="mt-8 grid grid-cols-2 gap-6">
+                    <a href="https://www.tbmm.gov.tr" target="_blank" 
+                       class="border border-red-700 text-red-700 hover:bg-red-700 hover:text-white py-4 rounded-xl transition text-center font-medium">
+                        TBMM Profili
+                    </a>
+                    <a href="https://www.instagram.com/emepantep/" target="_blank" 
+                       class="bg-red-700 text-white py-4 rounded-xl hover:bg-red-800 transition text-center font-medium flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-instagram"></i> Sosyal Medya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim" class="py-20 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">Bize Ulaşın</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-5">
+                        <i class="fa-solid fa-location-dot text-3xl text-red-500 mt-1"></i>
                         <div>
-                            <div class="text-xl font-medium">Sevda Karaca Demir</div>
-                            <div class="text-red-600">Gaziantep Milletvekili</div>
+                            <p class="font-medium">Adres</p>
+                            <p class="text-gray-400">Bey Mah. Atatürk Bulvarı (Öğretmenevi karşısı)
+
+                            Nuri Akınal Apt. Kat:3 No:49/5
+
+                            Şahinbey / Gaziantep</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-5">
+                        <i class="fa-solid fa-phone text-3xl text-red-500 mt-1"></i>
+                        <div>
+                            <p class="font-medium">Telefon</p>
+                            <p class="text-gray-400">İletişim için sosyal medya hesaplarımızı kullanabilirsiniz.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-5">
+                        <i class="fa-solid fa-envelope text-3xl text-red-500 mt-1"></i>
+                        <div>
+                            <p class="font-medium">Sosyal Medya</p>
+                            <div class="flex gap-6 mt-4">
+                                <a href="https://www.instagram.com/emepantep/" target="_blank" class="text-4xl hover:text-red-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/emepantep/" target="_blank" class="text-4xl hover:text-red-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://x.com/emepantep" target="_blank" class="text-4xl hover:text-red-500 transition"><i class="fa-brands fa-x-twitter"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-100 p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold mb-6">İlkelerimiz</h3>
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> İşçi sınıfı iktidarı</li>
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Emperyalizme karşı bağımsızlık</li>
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Eşitlik ve özgürlük</li>
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Halkların kardeşliği</li>
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Çevre ve emek mücadelesi</li>
-                    </ul>
-                </div>
+            </div>
+            
+            <div class="bg-gray-800 p-10 rounded-3xl">
+                <h3 class="text-2xl font-bold mb-6">Katılmak İstiyorum</h3>
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Mesajınız alındı! Teşekkürler. (Bu demo sitedir)');">
+                    <input type="text" placeholder="Ad Soyad" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                    <input type="tel" placeholder="Telefon" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                    <textarea placeholder="Mesajınız" rows="5" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white"></textarea>
+                    <button type="submit" 
+                            class="w-full bg-red-700 hover:bg-red-600 py-5 rounded-2xl text-xl font-bold transition">
+                        GÖNDER
+                    </button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FAALİYETLER -->
-    <section id="faaliyetler" class="py-20 bg-red-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Son Faaliyetlerimiz</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Faaliyet kartları burası aynı kaldı -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
-                    <img src="https://picsum.photos/id/1015/600/400" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">İşçi Direnişlerine Destek</h3>
-                        <p class="text-gray-600">Gaziantep'teki fabrikalarda süren direnişlere dayanışma ziyaretleri düzenliyoruz.</p>
-                    </div>
-                </div>
-                <!-- Diğer iki kart da aynı şekilde devam eder... -->
-            </div>
-        </div>
-    </section>
-
-    <!-- MİLLETVEKİLİ ve diğer bölümler aynı şekilde devam ediyor... -->
-    <!-- (Kod çok uzun olduğu için tamamını buraya yazmadım ama hepsi temizlendi) -->
-
-    <!-- FOOTER -->
-    <footer class="bg-black text-gray-400 py-12">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex items-center gap-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EMEP_Logo.svg/512px-EMEP_Logo.svg.png" 
-                         alt="EMEP Logo" class="h-10 w-auto">
-                    <div class="text-white">
-                        <div class="font-bold">EMEP GAZİANTEP</div>
-                        <div class="text-sm">Emek Partisi</div>
-                    </div>
-                </div>
-                
-                <div class="text-center text-sm">
-                    © 2026 Emek Partisi Gaziantep İl Örgütü<br>
-                    Tüm hakları saklıdır.
-                </div>
-                
-                <div>
-                    <a href="https://www.emep.org" target="_blank" class="hover:text-white transition">www.emep.org</a>
+<!-- FOOTER -->
+<footer class="bg-black text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center text-white text-2xl font-bold">E</div>
+                <div class="text-white">
+                    <div class="font-bold">EMEP GAZİANTEP</div>
+                    <div class="text-sm">Emek Partisi</div>
                 </div>
             </div>
-        </div>
-    </footer>
+            
+            <div class="text-center text-sm">
+                © 2026 Emek Partisi Gaziantep İl Örgütü
 
-    <script>
-        console.log('%cEMEP Gaziantep Sitesi hazır!', 'color: #c8102e; font-size: 16px; font-weight: bold');
-    </script>
-</body>
+                Tüm hakları saklıdır.
+            </div>
+            
+            <div>
+                <a href="https://www.emep.org" target="_blank" class="hover:text-white transition">www.emep.org</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    console.log('%cEMEP Gaziantep Sitesi hazır!', 'color: #c8102e; font-size: 16px; font-weight: bold');
+</script></body>
 </html>
+
