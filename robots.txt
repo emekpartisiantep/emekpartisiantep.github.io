@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://emekpartisiantep.github.io/sitemap.xml
