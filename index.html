@@ -17,10 +17,8 @@
             background-position: center;
         }
         
-        .red-bg { background-color: #c8102e; }
-        
         .emep-logo {
-            height: 56px;
+            height: 58px;
             width: auto;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
         }
@@ -43,19 +41,6 @@
             z-index: 1;
             border-radius: 22px;
         }
-        .mv-photo-wrapper::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 24px;
-            background: rgba(200, 16, 46, 0.25);
-            border-radius: 50%;
-            filter: blur(10px);
-            z-index: 0;
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -72,7 +57,7 @@
                 
                 <div>
                     <h1 class="text-2xl font-bold text-red-700">EMEP</h1>
-                    <p class="text-sm text-gray-600 -mt-1">GAZİANTEP</p>
+                    <p class="text-sm text-gray-600 -mt-1">GAZİANTEP İL BAŞKANLIĞI</p>
                 </div>
             </div>
             
@@ -126,17 +111,6 @@
                 <p class="text-lg leading-relaxed">
                     Gaziantep'in fabrika ve atölyelerinde çalışan emekçilerle omuz omuza, insanca bir yaşam için direniyoruz.
                 </p>
-                <div class="mt-10 flex items-center gap-6">
-                    <div class="text-center">
-                        <div class="text-4xl font-bold text-red-700">1996</div>
-                        <div class="text-sm">Kuruluş</div>
-                    </div>
-                    <div class="h-12 w-px bg-gray-300"></div>
-                    <div>
-                        <div class="text-xl font-medium">Sevda Karaca Demir</div>
-                        <div class="text-red-600">Gaziantep Milletvekili</div>
-                    </div>
-                </div>
             </div>
             <div class="bg-gray-100 p-8 rounded-2xl">
                 <h3 class="text-2xl font-bold mb-6">İlkelerimiz</h3>
@@ -152,24 +126,6 @@
     </div>
 </section>
 
-<!-- FAALİYETLER -->
-<section id="faaliyetler" class="py-20 bg-red-50">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12">Son Faaliyetlerimiz</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Faaliyet kartları burda kalıyor -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
-                <img src="https://picsum.photos/id/1015/600/400" class="w-full h-52 object-cover">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2">İşçi Direnişlerine Destek</h3>
-                    <p class="text-gray-600">Gaziantep'teki fabrikalarda süren direnişlere dayanışma ziyaretleri düzenliyoruz.</p>
-                </div>
-            </div>
-            <!-- Diğer iki kart da aynı şekilde devam ediyor... -->
-        </div>
-    </div>
-</section>
-
 <!-- MİLLETVEKİLİ -->
 <section id="milletvekili" class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-6 text-center">
@@ -179,31 +135,44 @@
         <div class="flex flex-col md:flex-row gap-12 items-center justify-center">
             <div class="mv-photo-wrapper flex-shrink-0">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Sevda_Karaca_Demir_%28cropped%29.jpg" 
-                     alt="Sevda Karaca Demir - EMEP Gaziantep Milletvekili"
+                     alt="Sevda Karaca Demir"
                      class="w-72 h-80 object-cover object-top shadow-2xl">
             </div>
             <div class="text-left max-w-xl">
                 <p class="text-lg leading-relaxed mb-4">
                     Sevda Karaca Demir, EMEP Gaziantep Milletvekilidir. Emekçilerin, kadınların ve gençlerin hakları için TBMM'de ve sahada mücadele etmektedir.
                 </p>
-                <p class="text-base text-gray-600 leading-relaxed">
-                    Çocuk emeği sömürüsü, MESEM uygulamaları ve işçi hakları başta olmak üzere, sosyal adaletsizliklere karşı meclis kürsüsünden sesini yükseltmektedir.
-                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- İLETİŞİM ve FOOTER bölümleri aynı kalıyor (kodu çok uzatmamak için burada kesiyorum) -->
-
-<!-- İLETİŞİM -->
-<section id="iletisim" class="py-20 bg-gray-900 text-white">
-    <!-- ... (mevcut iletişim bölümün aynı kalabilir) ... -->
-</section>
+<!-- Diğer bölümler (Faaliyetler, İletişim, Footer) istersen söyle, tamamını vereyim. -->
 
 <!-- FOOTER -->
 <footer class="bg-black text-gray-400 py-12">
-    <!-- ... (mevcut footer aynı) ... -->
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <!-- Footer'da da aynı logo -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EMEP_Logo.svg/512px-EMEP_Logo.svg.png" 
+                     alt="EMEP Logo" 
+                     class="h-10 w-auto">
+                <div class="text-white">
+                    <div class="font-bold">EMEP GAZİANTEP</div>
+                    <div class="text-sm">Emek Partisi İl Örgütü</div>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm">
+                © 2026 Emek Partisi Gaziantep İl Örgütü
+            </div>
+            
+            <div>
+                <a href="https://www.emep.org" target="_blank" class="hover:text-white transition">www.emep.org</a>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script>
