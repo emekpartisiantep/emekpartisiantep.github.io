@@ -18,12 +18,11 @@
         }
         
         .emep-logo {
-            height: 58px;
+            height: 62px;
             width: auto;
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
         }
 
-        /* Milletvekili fotoğraf çerçevesi */
         .mv-photo-wrapper {
             position: relative;
             display: inline-block;
@@ -31,7 +30,7 @@
         .mv-photo-wrapper::before {
             content: '';
             position: absolute;
-            inset: -6px;
+            inset: -8px;
             border-radius: 28px;
             background: linear-gradient(135deg, #c8102e 0%, #ff4d6d 50%, #c8102e 100%);
             z-index: 0;
@@ -51,17 +50,18 @@
         <div class="flex items-center justify-between px-6 py-4">
             <div class="flex items-center gap-3">
                 <!-- EMEP LOGOSU -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EMEP_Logo.svg/512px-EMEP_Logo.svg.png" 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/EMEP_Logo.svg" 
                      alt="EMEP Logo" 
-                     class="emep-logo">
+                     class="emep-logo"
+                     onerror="this.src='https://via.placeholder.com/200x70/c8102e/ffffff?text=EMEP';">
                 
                 <div>
-                    <h1 class="text-2xl font-bold text-red-700">EMEP</h1>
+                    <h1 class="text-3xl font-bold text-red-700">EMEP</h1>
                     <p class="text-sm text-gray-600 -mt-1">GAZİANTEP İL BAŞKANLIĞI</p>
                 </div>
             </div>
             
-            <nav class="hidden md:flex items-center gap-8 text-lg">
+            <nav class="hidden md:flex items-center gap-8 text-lg font-medium">
                 <a href="#hakkimizda" class="hover:text-red-700 transition">Hakkımızda</a>
                 <a href="#faaliyetler" class="hover:text-red-700 transition">Faaliyetler</a>
                 <a href="#milletvekili" class="hover:text-red-700 transition">Milletvekilimiz</a>
@@ -69,7 +69,7 @@
             </nav>
             
             <a href="https://www.emep.org" target="_blank" 
-               class="bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition font-medium">
+               class="bg-red-700 text-white px-6 py-3 rounded-lg hover:bg-red-800 transition font-medium">
                 ANA SİTE
             </a>
         </div>
@@ -87,11 +87,11 @@
             <span class="text-yellow-400">Bütün ülkelerin işçileri birleşin!</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#iletisim" class="bg-red-700 hover:bg-red-800 text-white text-xl px-10 py-5 rounded-xl font-bold transition inline-block">
+            <a href="#iletisim" class="bg-red-700 hover:bg-red-800 text-white text-xl px-10 py-5 rounded-xl font-bold transition">
                 BİZE KATIL
             </a>
             <a href="https://www.instagram.com/emepantep/" target="_blank" 
-               class="bg-white text-red-700 hover:bg-gray-100 text-xl px-10 py-5 rounded-xl font-bold transition inline-flex items-center justify-center gap-3">
+               class="bg-white text-red-700 hover:bg-gray-100 text-xl px-10 py-5 rounded-xl font-bold transition inline-flex items-center gap-3">
                 <i class="fa-brands fa-instagram"></i> @emepantep
             </a>
         </div>
@@ -105,8 +105,7 @@
             <div>
                 <h2 class="text-4xl font-bold text-red-700 mb-8">EMEP Gaziantep</h2>
                 <p class="text-lg leading-relaxed mb-6">
-                    Emek Partisi (EMEP) Gaziantep İl Örgütü olarak, işçilerin, emekçilerin, gençlerin ve ezilenlerin hakları için mücadele ediyoruz. 
-                    Kapitalizmin sömürüsüne, emperyalizme ve gericiliğe karşı örgütlü bir mücadele yürütüyoruz.
+                    Emek Partisi (EMEP) Gaziantep İl Örgütü olarak, işçilerin, emekçilerin, gençlerin ve ezilenlerin hakları için mücadele ediyoruz.
                 </p>
                 <p class="text-lg leading-relaxed">
                     Gaziantep'in fabrika ve atölyelerinde çalışan emekçilerle omuz omuza, insanca bir yaşam için direniyoruz.
@@ -139,7 +138,7 @@
                      class="w-72 h-80 object-cover object-top shadow-2xl">
             </div>
             <div class="text-left max-w-xl">
-                <p class="text-lg leading-relaxed mb-4">
+                <p class="text-lg leading-relaxed mb-6">
                     Sevda Karaca Demir, EMEP Gaziantep Milletvekilidir. Emekçilerin, kadınların ve gençlerin hakları için TBMM'de ve sahada mücadele etmektedir.
                 </p>
             </div>
@@ -147,15 +146,12 @@
     </div>
 </section>
 
-<!-- Diğer bölümler (Faaliyetler, İletişim, Footer) istersen söyle, tamamını vereyim. -->
-
 <!-- FOOTER -->
 <footer class="bg-black text-gray-400 py-12">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-3">
-                <!-- Footer'da da aynı logo -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EMEP_Logo.svg/512px-EMEP_Logo.svg.png" 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/EMEP_Logo.svg" 
                      alt="EMEP Logo" 
                      class="h-10 w-auto">
                 <div class="text-white">
@@ -165,7 +161,8 @@
             </div>
             
             <div class="text-center text-sm">
-                © 2026 Emek Partisi Gaziantep İl Örgütü
+                © 2026 Emek Partisi Gaziantep İl Örgütü<br>
+                Tüm hakları saklıdır.
             </div>
             
             <div>
@@ -176,7 +173,7 @@
 </footer>
 
 <script>
-    console.log('%cEMEP Gaziantep Sitesi hazır!', 'color: #c8102e; font-size: 16px; font-weight: bold');
+    console.log('%cEMEP Gaziantep Sitesi başarıyla yüklendi!', 'color: #c8102e; font-size: 16px; font-weight: bold');
 </script>
 </body>
 </html>
