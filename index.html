@@ -64,7 +64,7 @@
                 <a href="#hakkimizda" class="hover:text-red-700 transition">Hakkımızda</a>
                 <a href="#faaliyetler" class="hover:text-red-700 transition">Faaliyetler</a>
                 <a href="#milletvekili" class="hover:text-red-700 transition">Milletvekilimiz</a>
-                <a href="#iletisim" class="hover:text-red-700 transition">İletişim</a>
+                <a href="#iletisim" class="hover:text-red-700 transition">İletişim & Bağış</a>
             </nav>
             
             <a href="https://www.emep.org" target="_blank" 
@@ -78,10 +78,7 @@
 <!-- HERO -->
 <section class="hero-bg h-screen flex items-center text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-        <!-- Hero Logo -->
-        <img src="emep-logo.png" 
-             alt="EMEP Logo" 
-             class="mx-auto mb-6 h-24 opacity-90"
+        <img src="emep-logo.png" alt="EMEP Logo" class="mx-auto mb-6 h-24 opacity-90"
              onerror="this.style.display='none';">
         
         <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -95,22 +92,19 @@
             <a href="#iletisim" class="bg-red-700 hover:bg-red-800 text-white text-xl px-10 py-5 rounded-xl font-bold transition">
                 BİZE KATIL
             </a>
-            <a href="https://www.instagram.com/emepantep/" target="_blank" 
-               class="bg-white text-red-700 hover:bg-gray-100 text-xl px-10 py-5 rounded-xl font-bold transition inline-flex items-center gap-3">
-                <i class="fa-brands fa-instagram"></i> @emepantep
-            </a>
         </div>
     </div>
 </section>
 
-<!-- HAKKIMIZDA ve MİLLETVEKİLİ bölümleri aynı kaldı (kısaltmak için atladım) -->
-
-<!-- İLETİŞİM -->
+<!-- İLETİŞİM & BAĞIŞ -->
 <section id="iletisim" class="py-20 bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16">
+        <h2 class="text-4xl font-bold text-center mb-12">İletişim & Bağış</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Sol Taraf: İletişim -->
             <div>
-                <h2 class="text-4xl font-bold mb-8">Bize Ulaşın</h2>
+                <h3 class="text-2xl font-bold mb-8">Bize Ulaşın</h3>
                 <div class="space-y-8">
                     <div class="flex gap-5">
                         <i class="fa-solid fa-location-dot text-3xl text-red-500 mt-1"></i>
@@ -140,25 +134,36 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Formspree Form -->
-            <div class="bg-gray-800 p-10 rounded-3xl">
-                <h3 class="text-2xl font-bold mb-6">Katılmak İstiyorum</h3>
-                <form action="https://formspree.io/f/xkoandga" method="POST" class="space-y-6">
-                    <input type="text" name="name" placeholder="Ad Soyad" required
-                           class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                    <input type="tel" name="phone" placeholder="Telefon" required
-                           class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                    <input type="email" name="email" placeholder="E-posta Adresiniz" 
-                           class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                    <textarea name="message" placeholder="Mesajınız" rows="5" required
-                              class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white"></textarea>
-                    <button type="submit" 
-                            class="w-full bg-red-700 hover:bg-red-600 py-5 rounded-2xl text-xl font-bold transition">
-                        GÖNDER
-                    </button>
-                </form>
+
+            <!-- Sağ Taraf: Bağış -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-green-400">Bağış Yap</h3>
+                <div class="bg-gray-800 p-8 rounded-3xl border border-green-500/30">
+                    <p class="font-medium mb-4">Banka Hesap Bilgilerimiz</p>
+                    <div class="space-y-4 text-gray-300">
+                        <p><strong>Alıcı:</strong> Emek Partisi</p>
+                        <p><strong>IBAN:</strong> <span class="font-mono text-lg">TR82 0006 4000 0011 1050 7549 13</span></p>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-6">
+                        Bağışlarınız için teşekkür ederiz.<br>
+                        Her destek mücadelemize güç katmaktadır.
+                    </p>
+                </div>
             </div>
+        </div>
+
+        <!-- Katılma Formu -->
+        <div class="mt-16 bg-gray-800 p-10 rounded-3xl">
+            <h3 class="text-2xl font-bold mb-6 text-center">Katılmak İstiyorum</h3>
+            <form action="https://formspree.io/f/xkoandga" method="POST" class="space-y-6 max-w-2xl mx-auto">
+                <input type="text" name="name" placeholder="Ad Soyad" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                <input type="tel" name="phone" placeholder="Telefon" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                <input type="email" name="email" placeholder="E-posta Adresiniz" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                <textarea name="message" placeholder="Mesajınız" rows="5" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white"></textarea>
+                <button type="submit" class="w-full bg-red-700 hover:bg-red-600 py-5 rounded-2xl text-xl font-bold transition">
+                    GÖNDER
+                </button>
+            </form>
         </div>
     </div>
 </section>
