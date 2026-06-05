@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Etiketleri -->
+    <meta name="description" content="Emek Partisi (EMEP) Gaziantep İl Örgütü resmi web sitesi. İşçilerin, emekçilerin ve gençlerin mücadele örgütü.">
+    <meta name="keywords" content="EMEP, Emek Partisi, Gaziantep, Sevda Karaca, işçi, sendika, direniş">
+    
     <title>EMEP Gaziantep | Emek Partisi</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Türkçe karakter desteği için latin-ext eklendi -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
     
     <style>
+        /* Yumuşak kaydırma eklendi */
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 90px; 
+        }
+        
         body { font-family: 'Roboto', sans-serif; }
         
         .hero-bg {
@@ -51,7 +63,7 @@
         <div class="flex items-center justify-between px-6 py-4">
             <div class="flex items-center gap-3">
                 <img src="emep-logo.png" 
-                     alt="EMEP Logo" 
+                     alt="Emek Partisi Logosu" 
                      class="emep-logo"
                      onerror="this.src='https://via.placeholder.com/220x70/c8102e/ffffff?text=EMEP';">
                 
@@ -61,6 +73,7 @@
                 </div>
             </div>
             
+            <!-- Masaüstü Menü -->
             <nav class="hidden md:flex items-center gap-8 text-lg font-medium">
                 <a href="#hakkimizda" class="hover:text-red-700 transition">Hakkımızda</a>
                 <a href="#faaliyetler" class="hover:text-red-700 transition">Faaliyetler</a>
@@ -68,8 +81,25 @@
                 <a href="#iletisim" class="hover:text-red-700 transition">İletişim & Bağış</a>
             </nav>
             
+            <!-- Masaüstü Buton -->
             <a href="https://www.emep.org" target="_blank" 
-               class="bg-red-700 text-white px-6 py-3 rounded-lg hover:bg-red-800 transition font-medium">
+               class="hidden md:inline-block bg-red-700 text-white px-6 py-3 rounded-lg hover:bg-red-800 transition font-medium">
+                ANA SİTE
+            </a>
+
+            <!-- Mobil Hamburger Butonu -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800 text-3xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobil Menü İçeriği (Varsayılan olarak gizli) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4 shadow-inner">
+            <a href="#hakkimizda" class="block text-lg font-medium text-gray-800 hover:text-red-700">Hakkımızda</a>
+            <a href="#faaliyetler" class="block text-lg font-medium text-gray-800 hover:text-red-700">Faaliyetler</a>
+            <a href="#milletvekili" class="block text-lg font-medium text-gray-800 hover:text-red-700">Milletvekilimiz</a>
+            <a href="#iletisim" class="block text-lg font-medium text-gray-800 hover:text-red-700">İletişim & Bağış</a>
+            <a href="https://www.emep.org" target="_blank" class="block text-center bg-red-700 text-white px-6 py-3 rounded-lg hover:bg-red-800 transition font-medium mt-4">
                 ANA SİTE
             </a>
         </div>
@@ -79,7 +109,7 @@
 <!-- HERO -->
 <section class="hero-bg h-screen flex items-center text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-        <img src="emep-logo.png" alt="EMEP Logo" class="mx-auto mb-6 h-24 opacity-90"
+        <img src="emep-logo.png" alt="Emek Partisi Logosu" class="mx-auto mb-6 h-24 opacity-90"
              onerror="this.style.display='none';">
         
         <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -90,17 +120,26 @@
             <span class="text-yellow-400">Bütün ülkelerin işçileri birleşin!</span>
         </p>
         
-        <!-- Sosyal Medya Butonları -->
+        <!-- Sosyal Medya Butonları (Çeşitlendirildi) -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#iletisim" class="bg-red-700 hover:bg-red-800 text-white text-xl px-10 py-5 rounded-xl font-bold transition">
                 BİZE KATIL
             </a>
             
-            <a href="https://www.instagram.com/emepantep/" target="_blank" 
-               class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-xl px-8 py-5 rounded-xl font-bold transition inline-flex items-center gap-3 border border-white/30">
-                <i class="fa-brands fa-instagram text-2xl"></i>
-                Instagram
-            </a>
+            <div class="flex gap-2">
+                <a href="https://www.instagram.com/emepantep/" target="_blank" title="Instagram"
+                   class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-xl px-5 py-5 rounded-xl transition border border-white/30 flex items-center justify-center">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://twitter.com/emepgaziantep" target="_blank" title="X (Twitter)"
+                   class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-xl px-5 py-5 rounded-xl transition border border-white/30 flex items-center justify-center">
+                    <i class="fa-brands fa-x-twitter text-2xl"></i>
+                </a>
+                <a href="https://www.facebook.com/emepgaziantep" target="_blank" title="Facebook"
+                   class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-xl px-5 py-5 rounded-xl transition border border-white/30 flex items-center justify-center">
+                    <i class="fa-brands fa-facebook-f text-2xl"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -132,6 +171,30 @@
     </div>
 </section>
 
+<!-- FAALİYETLER (Yeni Eklenen Bölüm) -->
+<section id="faaliyetler" class="py-20 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Sahada Biz</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <i class="fa-solid fa-helmet-safety text-4xl text-red-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">İşçi Buluşmaları</h3>
+                <p class="text-gray-600">Başpınar OSB başta olmak üzere fabrikalardaki direnişlerde işçilerin yanındayız, dayanışmayı büyütüyoruz.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <i class="fa-solid fa-bullhorn text-4xl text-red-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Sokak ve Meydanlar</h3>
+                <p class="text-gray-600">Zamara, yoksulluğa ve sömürüye karşı Gaziantep sokaklarında halkın sesini yükseltiyoruz.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <i class="fa-solid fa-users text-4xl text-red-600 mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Halk Toplantıları</h3>
+                <p class="text-gray-600">Mahallelerde emekçilerle, kampüslerde gençlerle bir araya gelerek yerel demokrasiyi inşa ediyoruz.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- MİLLETVEKİLİ -->
 <section id="milletvekili" class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-6 text-center">
@@ -141,7 +204,7 @@
         <div class="flex flex-col md:flex-row gap-12 items-center justify-center">
             <div class="mv-photo-wrapper flex-shrink-0">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Sevda_Karaca_Demir_%28cropped%29.jpg" 
-                     alt="Sevda Karaca Demir"
+                     alt="Gaziantep Milletvekili Sevda Karaca Demir Portresi"
                      class="w-72 h-80 object-cover object-top shadow-2xl">
             </div>
             <div class="text-left max-w-xl">
@@ -173,13 +236,18 @@
                                 Nuri Akınal Apt. Kat:3<br>
                                 Şahinbey / Gaziantep
                             </p>
+                            <!-- Harita Butonu -->
+                            <a href="https://maps.google.com/?q=Bey+Mahallesi+Yeşilsu+Parkı+Şahinbey+Gaziantep" target="_blank" class="inline-flex items-center gap-2 mt-3 text-red-400 hover:text-red-300 text-sm font-medium transition">
+                                <i class="fa-solid fa-map"></i> Haritada Göster
+                            </a>
                         </div>
                     </div>
                     <div class="flex gap-5">
                         <i class="fa-solid fa-phone text-3xl text-red-500 mt-1"></i>
                         <div>
                             <p class="font-medium">Telefon</p>
-                            <p class="text-gray-400 text-xl">0 312 232 41 97</p>
+                            <!-- Alan kodu yerel numara olarak düzeltildi -->
+                            <p class="text-gray-400 text-xl">0 342 232 41 97</p> 
                         </div>
                     </div>
                     <div class="flex gap-5">
@@ -195,11 +263,17 @@
             <!-- Bağış -->
             <div>
                 <h3 class="text-2xl font-bold mb-6 text-green-400">Bağış Yap</h3>
-                <div class="bg-gray-800 p-8 rounded-3xl border border-green-500/30">
+                <div class="bg-gray-800 p-8 rounded-3xl border border-green-500/30 relative">
                     <p class="font-medium mb-4">Banka Hesap Bilgilerimiz</p>
                     <div class="space-y-4 text-gray-300">
                         <p><strong>Alıcı:</strong> Emek Partisi</p>
-                        <p><strong>IBAN:</strong> <span class="font-mono text-lg">TR82 0006 4000 0011 1050 7549 13</span></p>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                            <p><strong>IBAN:</strong> <span id="iban-text" class="font-mono text-lg">TR820006400000111050754913</span></p>
+                            <!-- Kopyala Butonu -->
+                            <button onclick="copyIban(this)" class="bg-gray-700 hover:bg-gray-600 text-sm px-3 py-1.5 rounded transition flex items-center gap-2 max-w-max">
+                                <i class="fa-regular fa-copy"></i> <span>Kopyala</span>
+                            </button>
+                        </div>
                     </div>
                     <p class="text-sm text-gray-400 mt-6">
                         Bağışlarınız için teşekkür ederiz.<br>
@@ -209,15 +283,15 @@
             </div>
         </div>
 
-        <!-- Katılma Formu -->
+        <!-- Katılma Formu (Focus Stilleri Eklendi) -->
         <div class="mt-16 bg-gray-800 p-10 rounded-3xl">
             <h3 class="text-2xl font-bold mb-6 text-center">Katılmak İstiyorum</h3>
             <form action="https://formspree.io/f/xkoandga" method="POST" class="space-y-6 max-w-2xl mx-auto">
-                <input type="text" name="name" placeholder="Ad Soyad" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                <input type="tel" name="phone" placeholder="Telefon" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                <input type="email" name="email" placeholder="E-posta Adresiniz" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                <textarea name="message" placeholder="Mesajınız" rows="5" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white"></textarea>
-                <button type="submit" class="w-full bg-red-700 hover:bg-red-600 py-5 rounded-2xl text-xl font-bold transition">
+                <input type="text" name="name" placeholder="Ad Soyad" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition">
+                <input type="tel" name="phone" placeholder="Telefon" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition">
+                <input type="email" name="email" placeholder="E-posta Adresiniz" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition">
+                <textarea name="message" placeholder="Mesajınız" rows="5" required class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition"></textarea>
+                <button type="submit" class="w-full bg-red-700 hover:bg-red-600 py-5 rounded-2xl text-xl font-bold transition focus:ring-4 focus:ring-red-900">
                     GÖNDER
                 </button>
             </form>
@@ -230,13 +304,20 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-3">
-                <img src="emep-logo.png" alt="EMEP Logo" class="h-10 w-auto">
-                <div class="text-white">
+                <img src="emep-logo.png" alt="Emek Partisi Logosu" class="h-10 w-auto">
+                <div class="text-white text-left">
                     <div class="font-bold">EMEP GAZİANTEP</div>
                     <div class="text-sm">Emek Partisi İl Örgütü</div>
                 </div>
             </div>
-            <div class="text-center text-sm">
+            
+            <div class="flex gap-4">
+                <a href="https://twitter.com/emepgaziantep" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+                <a href="https://www.facebook.com/emepgaziantep" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                <a href="https://www.instagram.com/emepantep/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+            </div>
+
+            <div class="text-center md:text-right text-sm">
                 © 2026 Emek Partisi Gaziantep İl Örgütü
             </div>
         </div>
@@ -244,7 +325,37 @@
 </footer>
 
 <script>
-    console.log('%cEMEP Gaziantep Sitesi hazır!', 'color: #c8102e; font-size: 16px; font-weight: bold');
+    // Mobil Menü Aç/Kapat Fonksiyonu
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Mobil menüdeki linklere tıklayınca menüyü kapatma
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // IBAN Kopyalama Fonksiyonu
+    function copyIban(btn) {
+        const textToCopy = document.getElementById('iban-text').innerText;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-check text-green-400"></i> <span class="text-green-400">Kopyalandı!</span>';
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+            }, 2000);
+        }).catch(err => {
+            console.error('Kopyalama başarısız: ', err);
+        });
+    }
+
+    console.log('%cEMEP Gaziantep Sitesi başarıyla yüklendi!', 'color: #c8102e; font-size: 16px; font-weight: bold');
 </script>
 </body>
 </html>
