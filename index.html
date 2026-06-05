@@ -12,9 +12,10 @@
         body { font-family: 'Roboto', sans-serif; }
         
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/1920/1080');
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('antep.png');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         
         .emep-logo {
@@ -88,9 +89,17 @@
             İşçi sınıfının partisi Gaziantep'te örgütleniyor!<br>
             <span class="text-yellow-400">Bütün ülkelerin işçileri birleşin!</span>
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        
+        <!-- Sosyal Medya Butonları -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#iletisim" class="bg-red-700 hover:bg-red-800 text-white text-xl px-10 py-5 rounded-xl font-bold transition">
                 BİZE KATIL
+            </a>
+            
+            <a href="https://www.instagram.com/emepantep/" target="_blank" 
+               class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-xl px-8 py-5 rounded-xl font-bold transition inline-flex items-center gap-3 border border-white/30">
+                <i class="fa-brands fa-instagram text-2xl"></i>
+                Instagram
             </a>
         </div>
     </div>
@@ -139,9 +148,6 @@
                 <p class="text-lg leading-relaxed mb-6">
                     Sevda Karaca Demir, EMEP Gaziantep Milletvekilidir. Emekçilerin, kadınların ve gençlerin hakları için TBMM'de ve sahada mücadele etmektedir.
                 </p>
-                <p class="text-base text-gray-600 leading-relaxed">
-                    Çocuk emeği sömürüsü, MESEM uygulamaları ve işçi hakları başta olmak üzere, sosyal adaletsizliklere karşı meclis kürsüsünden sesini yükseltmektedir.
-                </p>
             </div>
         </div>
     </div>
@@ -153,7 +159,7 @@
         <h2 class="text-4xl font-bold text-center mb-12">İletişim & Bağış</h2>
         
         <div class="grid md:grid-cols-2 gap-12">
-            <!-- İletişim Bilgileri -->
+            <!-- İletişim -->
             <div>
                 <h3 class="text-2xl font-bold mb-8">Bize Ulaşın</h3>
                 <div class="space-y-8">
@@ -186,7 +192,7 @@
                 </div>
             </div>
 
-            <!-- Bağış Bilgileri -->
+            <!-- Bağış -->
             <div>
                 <h3 class="text-2xl font-bold mb-6 text-green-400">Bağış Yap</h3>
                 <div class="bg-gray-800 p-8 rounded-3xl border border-green-500/30">
@@ -232,9 +238,6 @@
             </div>
             <div class="text-center text-sm">
                 © 2026 Emek Partisi Gaziantep İl Örgütü
-            </div>
-            <div>
-                <a href="https://www.emep.org" target="_blank" class="hover:text-white transition">www.emep.org</a>
             </div>
         </div>
     </div>
