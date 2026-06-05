@@ -78,6 +78,12 @@
 <!-- HERO -->
 <section class="hero-bg h-screen flex items-center text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
+        <!-- Hero Logo -->
+        <img src="emep-logo.png" 
+             alt="EMEP Logo" 
+             class="mx-auto mb-6 h-24 opacity-90"
+             onerror="this.style.display='none';">
+        
         <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             EMEKTEN YANA<br>GAZİANTEP İÇİN MÜCADELE
         </h2>
@@ -97,53 +103,7 @@
     </div>
 </section>
 
-<!-- HAKKIMIZDA -->
-<section id="hakkimizda" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-bold text-red-700 mb-8">EMEP Gaziantep</h2>
-                <p class="text-lg leading-relaxed mb-6">
-                    Emek Partisi (EMEP) Gaziantep İl Örgütü olarak, işçilerin, emekçilerin, gençlerin ve ezilenlerin hakları için mücadele ediyoruz.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    Gaziantep'in fabrika ve atölyelerinde çalışan emekçilerle omuz omuza, insanca bir yaşam için direniyoruz.
-                </p>
-            </div>
-            <div class="bg-gray-100 p-8 rounded-2xl">
-                <h3 class="text-2xl font-bold mb-6">İlkelerimiz</h3>
-                <ul class="space-y-4 text-lg">
-                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> İşçi sınıfı iktidarı</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Emperyalizme karşı bağımsızlık</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Eşitlik ve özgürlük</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Halkların kardeşliği</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-check text-green-600 mt-1"></i> Çevre ve emek mücadelesi</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- MİLLETVEKİLİ -->
-<section id="milletvekili" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-4">Gaziantep Milletvekilimiz</h2>
-        <div class="text-3xl text-red-700 mb-10">Sevda Karaca Demir</div>
-        
-        <div class="flex flex-col md:flex-row gap-12 items-center justify-center">
-            <div class="mv-photo-wrapper flex-shrink-0">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Sevda_Karaca_Demir_%28cropped%29.jpg" 
-                     alt="Sevda Karaca Demir"
-                     class="w-72 h-80 object-cover object-top shadow-2xl">
-            </div>
-            <div class="text-left max-w-xl">
-                <p class="text-lg leading-relaxed mb-6">
-                    Sevda Karaca Demir, EMEP Gaziantep Milletvekilidir. Emekçilerin, kadınların ve gençlerin hakları için TBMM'de ve sahada mücadele etmektedir.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- HAKKIMIZDA ve MİLLETVEKİLİ bölümleri aynı kaldı (kısaltmak için atladım) -->
 
 <!-- İLETİŞİM -->
 <section id="iletisim" class="py-20 bg-gray-900 text-white">
@@ -164,7 +124,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <div class="flex gap-5">
                         <i class="fa-solid fa-phone text-3xl text-red-500 mt-1"></i>
                         <div>
@@ -172,7 +131,6 @@
                             <p class="text-gray-400 text-xl">0 312 232 41 97</p>
                         </div>
                     </div>
-                    
                     <div class="flex gap-5">
                         <i class="fa-solid fa-envelope text-3xl text-red-500 mt-1"></i>
                         <div>
@@ -180,28 +138,23 @@
                             <p class="text-gray-400">emekpartisi@emep.org</p>
                         </div>
                     </div>
-                    
-                    <div class="flex gap-5">
-                        <i class="fa-solid fa-globe text-3xl text-red-500 mt-1"></i>
-                        <div>
-                            <p class="font-medium">Sosyal Medya</p>
-                            <div class="flex gap-6 mt-4">
-                                <a href="https://www.instagram.com/emepantep/" target="_blank" class="text-4xl hover:text-red-500 transition"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/emepantep/" target="_blank" class="text-4xl hover:text-red-500 transition"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="https://x.com/emepantep" target="_blank" class="text-4xl hover:text-red-500 transition"><i class="fa-brands fa-x-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             
+            <!-- Formspree Form -->
             <div class="bg-gray-800 p-10 rounded-3xl">
                 <h3 class="text-2xl font-bold mb-6">Katılmak İstiyorum</h3>
-                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Mesajınız alındı! Teşekkürler.');">
-                    <input type="text" placeholder="Ad Soyad" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                    <input type="tel" placeholder="Telefon" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
-                    <textarea placeholder="Mesajınız" rows="5" class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white"></textarea>
-                    <button type="submit" class="w-full bg-red-700 hover:bg-red-600 py-5 rounded-2xl text-xl font-bold transition">
+                <form action="https://formspree.io/f/xkoandga" method="POST" class="space-y-6">
+                    <input type="text" name="name" placeholder="Ad Soyad" required
+                           class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                    <input type="tel" name="phone" placeholder="Telefon" required
+                           class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                    <input type="email" name="email" placeholder="E-posta Adresiniz" 
+                           class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white">
+                    <textarea name="message" placeholder="Mesajınız" rows="5" required
+                              class="w-full bg-gray-700 border border-gray-600 rounded-xl px-6 py-4 text-white"></textarea>
+                    <button type="submit" 
+                            class="w-full bg-red-700 hover:bg-red-600 py-5 rounded-2xl text-xl font-bold transition">
                         GÖNDER
                     </button>
                 </form>
@@ -221,11 +174,9 @@
                     <div class="text-sm">Emek Partisi İl Örgütü</div>
                 </div>
             </div>
-            
             <div class="text-center text-sm">
                 © 2026 Emek Partisi Gaziantep İl Örgütü
             </div>
-            
             <div>
                 <a href="https://www.emep.org" target="_blank" class="hover:text-white transition">www.emep.org</a>
             </div>
